@@ -12,7 +12,7 @@ jobs:
         #if: "contains(github.event.head_commit.message, 'autotest')"
         with:
           token: ${{secrets.tkn}}
-          repository: kazu0523/dispatch
+          repository: kazu0523-sw/dispatch
           event-type: echo_message
           client-payload: '{"message": "${{github.event.head_commit.message}}","commitid":"${{github.sha}}","branch":"${{github.ref}}" }'
   run-console:
